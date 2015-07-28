@@ -506,7 +506,7 @@ def get_links():
         parsedsubs = subs[0]
         for sub in subs[1:]:
             parsedsubs = parsedsubs + '+' + sub
-    url = "http://www.reddit.com/r/" + parsedsubs + ".json?limit=" + str(
+    url = "http://www.reddit.com/r/" + parsedsubs + "/top.json?t=day&limit=" + str(
         maxlinks)
     log("Grabbing json file " + url)
     uaurl = urllib.request.Request(url, headers={
